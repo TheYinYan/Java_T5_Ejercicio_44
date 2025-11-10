@@ -42,8 +42,6 @@ public class App {
             }
             invertido /= 10;
         }
-        System.out.printf("Los números partidos son el %d y el %d.%n", parte1, parte2);
-
         long entro = (parte1 * 10 + insertar) * (int)(Math.pow(10, numParte2)) + parte2;
         System.out.printf("El número resultante es %d.", entro);
     }
