@@ -1,6 +1,6 @@
 public class App {
     public static void main(String[] args) throws Exception {
-        int num = 0;
+        long num = 0;
         int posicion = 0;
         int insertar = 0;
 
@@ -17,22 +17,22 @@ public class App {
 
         } while (!correcto);
 
-        int aux = num * 10 + 1;
-        int invertido = 0;
+        long aux = num * 10 + 1;
+        long invertido = 0;
         int numDigito = 0;
         while (aux > 0) {
-            int digito = aux % 10;
+            long digito = aux % 10;
             invertido = invertido * 10 + digito;
             numDigito++;
             aux /= 10;
         }
         numDigito--;
-        int parte1 = 0;
-        int parte2 = 0;
+        long parte1 = 0;
+        long parte2 = 0;
         int numParte2 = 0;
         for (int i = 1; i <= numDigito; i++) {
 
-            int digito = invertido % 10;
+            long digito = invertido % 10;
 
             if (i < posicion) {
                 parte1 = parte1 * 10 + digito;
@@ -44,7 +44,7 @@ public class App {
         }
         System.out.printf("Los números partidos son el %d y el %d.%n", parte1, parte2);
 
-        int entro = (parte1 * 10 + insertar) * (int)(Math.pow(10, numParte2)) + parte2;
+        long entro = (parte1 * 10 + insertar) * (int)(Math.pow(10, numParte2)) + parte2;
         System.out.printf("El número resultante es %d.", entro);
     }
 }
